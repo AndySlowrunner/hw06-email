@@ -14,5 +14,6 @@ authRouter.post('/login', isEmptyBody, validateBody(userLoginSchema), authContro
 authRouter.get('/current', authenticate, authController.getCurrent);
 authRouter.post('/logout', authenticate, authController.logout);
 authRouter.patch('/avatars', authenticate, upload.single('avatar'), authController.changeAvatar);
+authRouter.get('/verify/:verificationToken');
 
 export default authRouter;
