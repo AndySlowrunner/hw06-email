@@ -20,7 +20,7 @@ const userSchema = new Schema({
     subscription: {
         type: String,
         enum: ["starter", "pro", "business"],
-        default: "starter"
+        default: "starter",
     },
     avatarURL: {
         type: String,
@@ -32,7 +32,7 @@ const userSchema = new Schema({
         default: false,
     },
     verificationToken: {
-        type: String
+        type: String,
     },
 }, { versionKey: false, timestamps: true });
 
